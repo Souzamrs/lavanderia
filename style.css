@@ -1,0 +1,263 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: #f7faff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  background: #e0f0ff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 50px;
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: #0077cc;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #005fa3;
+}
+
+.hero {
+  background: linear-gradient(to right, #cce5ff, #e6f2ff);
+  padding: 4rem 0;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #003366;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.servicos {
+  padding: 3rem 0;
+  background: #ffffff;
+}
+
+.servicos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #e0f7ff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #cceeff;
+}
+
+.avaliacoes {
+  padding: 3rem 0;
+  background: #f0f8ff;
+  text-align: center;
+}
+
+.carrossel {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+.comentario {
+  display: none;
+  font-style: italic;
+}
+
+.comentario.ativo {
+  display: block;
+  animation: slideUp 0.5s ease;
+}
+
+.avaliar {
+  background: #ffffff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+.contato {
+  background: #e6f4ff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.localizacao {
+  padding: 3rem 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #005fa3;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.redes img {
+  transition: transform 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
